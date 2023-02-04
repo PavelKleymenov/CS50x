@@ -1,0 +1,25 @@
+sort1 uses: Bubble sort
+
+How do you know?: If you examine running times of both the worst case and the best case, taking
+random and sorted arrangements of numbers as an example, what you'll inevitably encounter is
+a significant drop in the running time in the latter sample. We know there is not much of
+a difference between worst cases’ running time as far as bubble and selection sorts are concerned.
+However, if it were the latter algorithm, there wouldn’t have been any difference between the running times,
+since in the case of selection sort time complexities are as follows: O(n^2) and Ω(n^2).
+From that, and drastically shorter running time of the sort2 algorithm,
+we may infer that this algorithm appears to be a bubble sort.
+
+
+sort2 uses: Merge Sort
+
+How do you know?: Drastically shorter running time compared to that of two others algorithms.
+And since it's known what algorithm has the shortest running time, we must conclude that this appears to be a merge sort
+
+sort3 uses: Selection Sort
+
+How do you know?: When comparing sort1 random10000.txt and sort3 random10000.txt running times,
+we notice that there's not much of a difference in this particular case.
+There is one between sort1 sorted10000.txt and sort3 sorted10000.txt, however.
+We know that in the instance of selection sort time complexities are as follows: O(n^2) and Ω(n^2).
+That implies there should be no discrepancy between the running times irrespective of the case.
+And if we run the program we, indeed, will be seeing just that. Hence, selection sort.
