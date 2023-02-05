@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <!-- Include links to Bootstrap and reference external CSS and JavaScript files-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        
+        <!--Make the homepage responsive-->
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        
+        <!--Reference an external JavaScript file, so the homepage can utilize the scripts you've written-->
+        <script src="homepage.js"></script>
+        
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Fiftyvox | free public domain audiobooks</title>
+    </head>
+    
+    <body>
+      <!--Add a navbar at the top of the page with 5 icons on the left and 1 on the right-->
+      <div class="topnav">
+
+        <!--Create an icon menu, whereupon each one has it's own icon-->
+        <!--Make the 'Home' button active, so that it's highlighted invariably-->
+        <!--Also, make sure the sidebar appears when the 'Home' button gets clicked on-->
+        <a class="active" href="#" onclick="home()"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="#" onclick="redirect()"><i class="fa fa-fw fa-globe"></i>About</a>
+        <a href="#"><i class="fa fa-fw fa-search"></i>Forum</a>
+        <a href="#" onclick="contact()"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+        <a href="#" onclick="signup()">Sign Up<i class="fa fa-fw fa-user"></i></a>
+
+        <!--Float the 'Log in' to the right, keeping it within the same navbar-->
+        <a href="#" class="split">Log In</a>
+        <a href="#" id="pro" class="split">Pro</a>
+      </div>
+
+      <!--Add a section that briefly introduces the idea behind the homepage-->
+        <div class="about-section">
+            <h1>Fiftyvox</h1>
+            <p>Free Public Domain Audiobooks</p>
+            <p>Read By Volunteers From Around The World<p>
+        </div>
+    
+        <!--Add a searchbar, so that the user may find desired content-->
+        <form class="example d-flex justify-content-center input-group m-5 pb-5" action="https://books.google.com/">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Choose a format</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Textbook</a></li>
+                    <li><a class="dropdown-item" href="#">Audiobook</a></li>
+                </ul>
+                
+            <input type="input" placeholder="Search.." name="q">
+      
+            <!--Create a button, so that the user can validate their search-->
+            <button type="submit" value="Google Search"><i class="fa fa-search"></i></button>
+        </form>
+    
+        <!--The tag below indicates a thematic change in the page content-->
+        <hr>
+        
+        <div class="row">
+            <div class="column">
+
+            <!--Add a card for user to apply for volunteering-->
+            <div class="card">
+                <div class="container">
+                    <h2>Read</h2>
+                    <p>FiftyVox audiobooks are read by volunteers from all over the world. Perhaps you would like to join us?</p>
+           
+            <!--Create a button, so that the user can validate their request-->
+            <button class="button">VOLUNTEER</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="column">
+        
+            <!--Add a card for user to look through the catalogue-->
+            <div class="card">
+                <div class="container">
+                    <h2>Listen</h2>
+                    <p>FiftyVox audiobooks are free for anyone to listen to, on their computers, iPods or other mobile device, or to burn onto a CD.</p>
+            
+                    <!--Create a button, so that the user can validate their search-->
+                    <button class="button">CATALOG</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+        
+            <!--The tag below indicates a thematic change in the page content-->
+            <hr>
+
+        <h3>Browse The Catalog</h3>
+
+        <!--Add a group of buttons, each representing a different parameter-->
+        <!--According to which the user can narrow down their search-->
+        
+            <div class="btn-group">
+                <button type="button" class="btn btn-dark">Author</button>
+                <button type="button" class="btn btn-dark">Title</button>
+                <button type="button" class="btn btn-dark">Genre/Subject</button>
+                <button type="button" class="btn btn-dark">Language</button>
+            </div>
+        
+            <!--The tag below indicates a thematic change in the page content-->
+            <hr>
+    
+            <!--Add a section that allows the user to sign up for a newsletter-->
+            <form class="rounded-pill m-5 pb-5" action="/action_page.php">
+                <div class="w-50 container-fluid mx-auto">
+          
+                    <!--Create two input fields; one for the user' name and -->
+                    <!-- the other for the email through they'd like to receive the roundup throug-->
+                    <input type="text" placeholder="Name" class="rounded-pill" name="name" required>
+                    <input type="text" placeholder="Email address" class="rounded-pill" name="mail" required>
+          
+                    <!--Specify the label for the input provided-->
+                    <label>
+                        <input type="checkbox" name="subscribe"> Daily Newsletter
+                    </label>
+          
+                    <input type="submit" class="rounded-pill" value="Subscribe">
+                </div>
+            </form>
+        
+            <!--The tag below indicates a thematic change in the page content-->
+            <hr>
+        
+            <!-- Add links to other social networks -->
+            <div class="d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-pinterest"></a>
+                        <a href="#" class="fa fa-snapchat-ghost"></a>
+                        <a href="#" class="fa fa-reddit"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--The tag below indicates a thematic change in the page content-->
+            <hr>
+      
+            <!--Add a button that allows the user to ask some questions that may appear during his visit to the homepage-->
+            <button class="open-button rounded-pill" onclick="openForm()">Chat</button>
+            
+            <div class="chat-popup" id="myForm">
+        
+                <!--Create a form that allows the user to interact with the moderator-->
+                <form action="/action_page.php" class="form-container">
+                    <h4>Ask us something</h4>
+                    <label for="msg"><b>Message</b></label>
+      
+                    <textarea placeholder="Type message.." name="msg" required></textarea>
+      
+                    <!--Confirm the submission-->
+                    <button type="submit" class="btn">Send</button>
+      
+                    <!--Close the form when no longer needed-->
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </body>
+    </html>
+

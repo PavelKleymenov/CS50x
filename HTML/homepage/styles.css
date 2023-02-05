@@ -1,0 +1,439 @@
+/* Specify the background color of the homepage */
+body {
+    background-color: #fff;
+    font-family: verdana, sans-serif;
+    margin: 0;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #443;
+    overflow: hidden;
+  }
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #696969;
+  color: white;
+}
+
+
+/*Change the color of the active button on hover */
+.topnav a.active:hover {
+  background-color: #fff;
+  color: black;
+}
+
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.split {
+  float: right;
+  background-color: #696969;
+  border-radius: 10px;
+  color: white;
+}
+
+
+#pro {
+  margin-right: 50px;
+  width: 80px;
+}
+
+
+/*Change the color of the "Log In" button on hover */
+.topnav a.split:hover {
+  background-color: #fff;
+  color: black;
+}
+
+
+/* Style the section with a page summary */
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e8d;
+  color: white;
+}
+
+
+/* Space out the content within cards */
+.container {
+  padding: 16px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+
+/* Specify the space between the cards and the section separation line */
+.row{
+  margin-top: 30px;
+}
+
+
+/* Set the properties to control the floating and position of the cards */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Style the card itself and the content inside of it */
+.column {
+  text-align:center;
+  width: 43%;
+  margin-bottom: 16px;
+  padding: 8px;
+  margin-left: 75px;
+}
+
+
+/* Add the shadow to the card and specify the space between it and the element below */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  flex: 50%;
+  border-radius: 30px;
+}
+
+
+/* Style the buttons within the cards to your liking */
+.button {
+  border: none;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #505050;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+/* Make the button assume a different color when it's hovered over */
+.button:hover {
+  background-color: #696969;
+  color: black;
+}
+
+
+/* Style the search field */
+form.example input[type=input] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid black;
+  width: 30%;
+  background: #f4f4f1;
+  border-radius: 15px;
+}
+
+
+/* Style the submit button */
+form.example button {
+  padding: 10px;
+  background: #443;
+  color: white;
+  font-size: 17px;
+  border: 1px solid black;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+
+/* Make the search button assume a different color when it's hovered over */
+form.example button:hover {
+  background: #fff;
+  color: black
+}
+
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Style the parameter buttons */
+.btn-dark{
+  float: left;
+  margin-bottom: 60px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+
+/* Make the parameter buttons assume a different color when they get hovered over */
+.btn-dark:hover {
+  background-color: #696969;
+  color: black;
+}
+
+
+/* Center the headings */
+h4, h2, h3 {
+  text-align: center;
+  color: #000;
+}
+
+
+/* Style the parameters group' position and look */
+.btn-group{
+  width: 100%;
+  background-color: #333;
+  overflow: auto;
+}
+
+
+/* Style both the input and the submit button within the newsletter form */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+/* Space out the verification button for the daily round-up */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+
+/* Style the subscribe button */
+input[type=submit] {
+  background-color: #474e8d;
+  color: white;
+  border: 1px black solid;
+}
+
+
+/* Alter the color and opacity of the subscribe button on hover */
+input[type=submit]:hover {
+  opacity: 0.8;
+  background: #fff;
+  color: black
+}
+
+
+/* Set the color for the text next to the checkbox */
+label {
+  color: white;
+}
+
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Style the 'Submit' button inside the card */
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+/* Alter the color of the 'Submit' button on hover */
+.button:hover {
+  background-color: #555;
+}
+
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #696969;
+  color: white;
+  padding: 16px 20px;
+  border: 1px dotted black;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 35px;
+  width: 100px;
+}
+
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: black;
+}
+
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #696969;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+/* Add some padding and a grey background color to containers */
+.container-fluid {
+  padding: 20px;
+  background-color: #515151;
+  border-radius: 15px;
+}
+
+
+/* Style social media buttons*/
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/*Make the button assume different color when hovered over*/
+.fa:hover {
+    opacity: 0.7;
+    color: white;
+}

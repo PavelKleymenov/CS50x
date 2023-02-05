@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <title>Trivia!</title>
+        <script>
+            // Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                // Query for a single HTML element
+                let correct = document.querySelector('.correct');
+                // Attach the 'click' event handler to a document
+                correct.addEventListener('click', function() {
+                    // If answered correctly, make the answer box turn green
+                    correct.style.backgroundColor = 'green';
+                    // Let the user know he's given the right answer
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+
+                });
+
+                // Query for multiple HTML elements that match a query.
+                let incorrect = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrect.length; i++) {
+                    // Make sure the function returns an array of all matching elements
+                    incorrect[i].addEventListener('click', function() {
+                        // If answered incorrectly, make the answer bar turn box
+                        incorrect[i].style.backgroundColor = 'red';
+                        // Let the user know he has to try again to give the right answer
+                        document.querySelectorAll('#feedback2') = 'Incorrect!';
+
+                    });
+                }
+                // Ensure the user has given the right answer to an input-like question
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    // Provided you entered what follows, make the answer box turn green
+                    // and give the confirmatory feedback
+                    if (input.value === 'Sugar And Formaldehyde'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!'
+                        // If the answer isn't what it supposed to be,
+                        // let the user know he has to try again
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                    }
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Add multiple choice question here -->
+                <h3> What is the shape of human DNA?</h3>
+                <button class="incorrect">triple phoenix</button>
+                <button class="correct">double helix</button>
+                <button class="incorrect">rectangular sphynx</button>
+
+                <p id="feedback1"></p>
+                <p id="feedback2"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Add free response question here -->
+                <h3>What elements does formose reaction involve?</h3>
+                <input type="text"></input>
+                <button id="check">Confirm</button>
+
+                <p id="feedback1"></p>
+            </div>
+        </div>
+    </body>
+</html>
