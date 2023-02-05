@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stock
+{% endblock %}
+
+{% block main %}
+
+    <!--Implement a form that allows users to buy stocks-->
+    <form action="/buy" method="post">
+
+        <!--Add an input field where users can specify which stock they'd like to purchase-->
+        <div class="form-group mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
+        </div>
+
+        <!--Add an input field where users can specify how many shares of that stock they'd like to purchase-->
+        <div class="form-group mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" min="1" name="shares" placeholder="Shares" type="number">
+        </div>
+
+        <!--Create a button that completes a transaction-->
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+{% endblock %}

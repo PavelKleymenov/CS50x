@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deregister
+{% endblock %}
+
+{% block main %}
+
+    <!--Implement a form that allows users to purge of their accounts-->
+    <form action="/deregister" method="post">
+
+        <!--Add an input field where users can specify the log - in name of the account they want to cancel-->
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+
+        <!--Add an input field where users can confrm their identity via providing password-->
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        
+        <!--Create a button that validates their request-->
+        <button class="btn btn-primary" type="submit">Screw It!</button>
+    </form>
+{% endblock %}

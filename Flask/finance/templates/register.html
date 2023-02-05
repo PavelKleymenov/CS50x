@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <!--Implement a form that allows users to create their own account-->
+    <form action="/register" method="post">
+
+        <!--Add an input field where users can type in their desired username-->
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+
+        <!--Add an input field where users can type in their desired password-->
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+
+        <!--Add an input field where users can confirm their password-->
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+
+        <!--Add a button through which users can validate their request-->
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+    </form>
+{% endblock %}

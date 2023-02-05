@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <!--Implement a form that allows users to sell a stock-->
+
+    <form action="/sell" method="post">
+        
+        <!--Add a select menu, so that the user can pick out the stock he'd like to sell-->
+        <fieldset>
+            <div class="select form-group mb-3"></div>
+
+            <!--Create an input field where user can specify how many stocks to put up for sale-->
+            <div class="form-group mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number" min="1">
+            </div>
+
+            <div class="validation">
+                <select name="symbol">
+
+                    <!--Iterate over the database to figure out the symbols available-->
+                    <option placeholder="Symbol"></option></option>
+                    {% for symbol in symbols %}
+                    
+                    <option value="{{symbol}}">{{symbol}}</option>
+                    {% endfor %}
+                </select>
+
+                <!--Add a button so that users can validate transaction-->
+                <button class="btn btn-primary" type="submit">Sell</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <!--Implement a form that allows users to log in their account-->
+    <form action="/login" method="post">
+
+        <!--Add an input field where users can type in their username-->
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+
+        <!--Add an input field where users can type in their password-->
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+
+        <!--Add a button through which users can validate their request-->
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+{% endblock %}

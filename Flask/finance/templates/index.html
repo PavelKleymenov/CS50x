@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Quote
+{% endblock %}
+
+{% block main %}
+
+    <!--Create a table that represent all relevant data about users activities-->
+    <div class="container">
+        <table class="table">
+
+            <!--Add headers-->
+            <tr>
+                <th>Stock Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+
+            <!--Iterate through each piece of data, so that it can be displayed-->
+            {% for i in package %}
+                <tr>
+                    <td>{{ i['symbol'].upper() }}</td>
+                    <td>{{ i['shares'] }}</td>
+                    <td>{{ i['price'] }}</td>
+                    <td>{{ i['total'] }}</td>
+                </tr>
+            {% endfor %}
+
+            <!--Add a field where the information about user current balance is presented-->
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td>{{ cash }}</td>
+                <td></td>
+            </tr>
+
+            <!--Add a field that showcases total value of the cash
+                and the money a given user currently has-->
+            <tr>
+                <td><strong>TOTAL</strong></td>
+                <td></td>
+                <td></td>
+                <td>{{ assets }}</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

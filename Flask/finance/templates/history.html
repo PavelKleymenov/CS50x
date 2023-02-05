@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <!--Implement a table that displays the history of each transcation and the relevant data thereof-->
+    <table class="table">
+        <thead class="thead-dark">
+
+            <!--Give names to relevant columns-->
+            <tr>
+              <th scope="col">Symbol</th>
+              <th scope="col">Shares</th>
+              <th scope="col">Price</th>
+              <th scope="col">Date</th>
+            </tr>
+        </thead>
+
+        <!--Iterate through the database, so that the data can be shown-->
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+              <th scope="row">{{ transaction["symbol"] }}</th>
+              <td>{{ transaction["shares"] }}</td>
+              <td>{{ transaction["price"] }}</td>
+              <td>{{ transaction["date"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!--Implement a form where users can look up stocks-->
+    <form action="/quote" method="post">
+
+        <!--Add an input field where users can type in the stock symbol they want to look up-->
+        <div class="form-group mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
+        </div>
+
+        <!--Add a button that allows users to validate their query-->
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+{% endblock %}
