@@ -1,0 +1,92 @@
+/* Set the general style for the webpage */
+body {
+    background-color: #fff000;
+    color: #212529;
+    font-size: 1rem;
+    font-family: verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+
+/* Style the space containing the form and the rest of the data below the heading*/
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 90%;
+}
+
+
+/* Add the coloring and set the position for the elements within the header*/
+.header {
+    background-color: #477bff;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+
+/* Create an extra space within elements for the heading and the input fields within the section */
+.section {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}
+
+
+/* Take care of the font style for the largest heading */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+
+/* Style the submit button*/
+input[type="submit"] {
+    background-color: #d9edff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+
+/* Style the input fields created for the data submission*/
+input[type="text"], input[type="number"] {
+    line-height: 1.8;
+    width: 25%;
+    margin-top: 20px;
+    border-radius: 0.25rem;
+}
+
+
+/* Make the submit button assume a different color when it's hovered over*/
+input[type="submit"]:hover {
+    background-color: rgb(179, 208, 255, 0.3)
+}
+
+
+/*Make the input fields assume a different color when they are hovered over
+    setting a specific time for a color to change*/
+input[type="text"]:hover, input[type="number"]:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+
+/* Change the coloring of every odd entry in the table*/
+tbody tr:nth-of-type(odd) {
+    background-color: rgb(179, 208, 255, 0.3)
+}

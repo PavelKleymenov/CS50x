@@ -1,0 +1,4 @@
+# List all the libraries required for the application
+Flask
+Flask-Session
+requests

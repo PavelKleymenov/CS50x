@@ -1,0 +1,63 @@
+/*General styling for the webpage*/
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAF0E6;
+    }
+
+    
+ /*Style the IEX hyperlink*/
+.exchange {
+    padding: 20px;
+    font-size:15px
+    }
+
+
+/* Space out the links within the footer */
+footer div .links div {
+    padding: 20px;
+    }
+
+
+/* Set the coloring and postioning for the material inside the footer */
+footer {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #2F4F4F;
+    position: absolute;
+    bottom: 0;
+    }
+
+
+/*Style the IEX related links within the footer*/
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+
+ /* Make the links within the footer underlined when those are hovered over */
+footer div .links div:hover {
+        text-decoration: underline;
+        cursor: pointer;
+     }
+
+
+/*Fill available free space and shrink the links within the footer to prevent overflow*/
+footer div .links {
+    display: flex;
+}
+
+
+/*Style any hyperlinks that appear on a webpage*/
+a {
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+
+/*Make sure those hyperlinks become underlined when hovered over*/
+a:hover {
+    text-decoration: underline;
+}
